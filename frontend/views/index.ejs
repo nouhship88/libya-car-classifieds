@@ -1,0 +1,16 @@
+<% if (cars.length === 0) { %>
+    <p>No cars available at the moment.</p>
+<% } else { %>
+    <ul>
+        <% cars.forEach(car => { %>
+            <li>
+                <strong><%= car.title %></strong><br>
+                <p><%= car.description %></p>
+                <p><strong>Price:</strong> <%= car.price %> LYD</p>
+                <p><strong>Year:</strong> <%= car.year %></p>
+                <p><strong>Odometer:</strong> <%= car.odometer %> km</p>
+                <p><strong>Location:</strong> <%= car.location %></p>
+            </li>
+        <% }) %>
+    </ul>
+<% } %>
